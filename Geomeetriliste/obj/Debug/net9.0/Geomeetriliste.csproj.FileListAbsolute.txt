@@ -1,0 +1,14 @@
+C:\Users\admin\RiderProjects\oop\Geomeetriliste\bin\Debug\net9.0\Geomeetriliste.exe
+C:\Users\admin\RiderProjects\oop\Geomeetriliste\bin\Debug\net9.0\Geomeetriliste.deps.json
+C:\Users\admin\RiderProjects\oop\Geomeetriliste\bin\Debug\net9.0\Geomeetriliste.runtimeconfig.json
+C:\Users\admin\RiderProjects\oop\Geomeetriliste\bin\Debug\net9.0\Geomeetriliste.dll
+C:\Users\admin\RiderProjects\oop\Geomeetriliste\bin\Debug\net9.0\Geomeetriliste.pdb
+C:\Users\admin\RiderProjects\oop\Geomeetriliste\obj\Debug\net9.0\Geomeetriliste.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\RiderProjects\oop\Geomeetriliste\obj\Debug\net9.0\Geomeetriliste.AssemblyInfoInputs.cache
+C:\Users\admin\RiderProjects\oop\Geomeetriliste\obj\Debug\net9.0\Geomeetriliste.AssemblyInfo.cs
+C:\Users\admin\RiderProjects\oop\Geomeetriliste\obj\Debug\net9.0\Geomeetriliste.csproj.CoreCompileInputs.cache
+C:\Users\admin\RiderProjects\oop\Geomeetriliste\obj\Debug\net9.0\Geomeetriliste.dll
+C:\Users\admin\RiderProjects\oop\Geomeetriliste\obj\Debug\net9.0\refint\Geomeetriliste.dll
+C:\Users\admin\RiderProjects\oop\Geomeetriliste\obj\Debug\net9.0\Geomeetriliste.pdb
+C:\Users\admin\RiderProjects\oop\Geomeetriliste\obj\Debug\net9.0\Geomeetriliste.genruntimeconfig.cache
+C:\Users\admin\RiderProjects\oop\Geomeetriliste\obj\Debug\net9.0\ref\Geomeetriliste.dll
