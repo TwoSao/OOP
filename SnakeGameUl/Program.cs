@@ -4,25 +4,24 @@
     {
         static void Main(string[] args)
         {
-            int x1 = 1;
-            int y1 = 3;
-            string symb = "*";
-            Draw(5, 5, "&");
-            Console.SetCursorPosition(x1, y1);
-            Console.WriteLine(symb);
+            Point p1 = new Point(1, 1, '*');
+            Point p2 = new Point(2, 2, '/');
+            p2.Draw();
+            HorizontaleLine upline = new HorizontaleLine(0,78,0,'+');
+            upline.Draw();
+            HorizontaleLine Hdownline = new HorizontaleLine(0,78,24,'+');
+            Hdownline.Draw();
+            VerticalLine left = new VerticalLine(0, 24, 0,'+');
+            VerticalLine right = new VerticalLine(0, 24, 78,'+');
+            left.Draw();
+            right.Draw();
             
-            int x2 = 4;
-            int y2 = 5;
-
-            Console.SetCursorPosition(x2, y2);
-            Console.WriteLine(symb);
+            Point p = new Point(4, 5, '*');
+            Snake snake = new Snake(p, 4, Direction.Right);
+            snake.Draw();
+            snake.Move();
         }
-
-        static void Draw(int x, int y, string symb)
-        {
-            Console.SetCursorPosition(x, y);
-            Console.WriteLine(symb);
-            
-        }
+        
+        
     }
 }
