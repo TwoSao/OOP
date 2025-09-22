@@ -16,36 +16,56 @@
                 }
                 else if (number == "1")
                 {
-                    autos auto = new autos();
-                    Console.WriteLine("Sisesta auto mark: ");
-                    auto.Mark = Console.ReadLine();
-                    Console.WriteLine("Sisesta tarbimist: ");
-                    auto.tarbimist = double.Parse(Console.ReadLine());
-                    Console.WriteLine("Sisesta auto kilometrit: ");
-                    auto.kilomeetrit = Convert.ToInt32(Console.ReadLine());
-                    
-                    list.Add(auto);
+                    try
+                    {
+                        autos auto = new autos();
+                        Console.WriteLine("Sisesta auto mark: ");
+                        auto.Mark = Console.ReadLine();
+                        Console.WriteLine("Sisesta tarbimist: ");
+                        auto.tarbimist = double.Parse(Console.ReadLine());
+                        Console.WriteLine("Sisesta auto kilometrit: ");
+                        auto.kilomeetrit = Convert.ToInt32(Console.ReadLine());
+                        
+                        list.Add(auto);
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Viga andmete sisestamisel!");
+                    }
                 }
                 else if (number == "2")
                 {
-                    Jalgart jalgart = new Jalgart();
-                    Console.WriteLine("Sisesta jalgat mark: ");
-                    jalgart.Mark = Console.ReadLine();
-                    Console.WriteLine("Sisesta kilo_arv: ");
-                    jalgart.kilo_arv = Int32.Parse(Console.ReadLine());
-                    list.Add(jalgart);
-                    
+                    try
+                    {
+                        Jalgart jalgart = new Jalgart();
+                        Console.WriteLine("Sisesta jalgat mark: ");
+                        jalgart.Mark = Console.ReadLine();
+                        Console.WriteLine("Sisesta kilo_arv: ");
+                        jalgart.kilo_arv = Int32.Parse(Console.ReadLine());
+                        list.Add(jalgart);
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Viga andmete sisestamisel!");
+                    }
                 }
                 
                 else if (number == "3")
                 {
-                    Console.WriteLine("Sisesta KütusekuluLiitrites: ");
-                    double KütusekuluLiitrites = double.Parse(Console.ReadLine());
-                    Console.WriteLine("Sisesta VahemaaKm: ");
-                    double VahemaaKm = double.Parse(Console.ReadLine());
-                    Console.WriteLine("Sisesta ReisijateArv: ");
-                    int ReisijateArv = int.Parse(Console.ReadLine());
-                    list.Add(new Buss(KütusekuluLiitrites, VahemaaKm, ReisijateArv));
+                    try
+                    {
+                        Console.WriteLine("Sisesta KütusekuluLiitrites: ");
+                        double KütusekuluLiitrites = double.Parse(Console.ReadLine());
+                        Console.WriteLine("Sisesta VahemaaKm: ");
+                        double VahemaaKm = double.Parse(Console.ReadLine());
+                        Console.WriteLine("Sisesta ReisijateArv: ");
+                        int ReisijateArv = int.Parse(Console.ReadLine());
+                        list.Add(new Buss(KütusekuluLiitrites, VahemaaKm, ReisijateArv));
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Viga andmete sisestamisel!");
+                    }
                 }
                 
 
