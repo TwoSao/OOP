@@ -1,0 +1,15 @@
+C:\Users\admin\RiderProjects\oop\transport\bin\Debug\net9.0\transport.exe
+C:\Users\admin\RiderProjects\oop\transport\bin\Debug\net9.0\transport.deps.json
+C:\Users\admin\RiderProjects\oop\transport\bin\Debug\net9.0\transport.runtimeconfig.json
+C:\Users\admin\RiderProjects\oop\transport\bin\Debug\net9.0\transport.dll
+C:\Users\admin\RiderProjects\oop\transport\bin\Debug\net9.0\transport.pdb
+C:\Users\admin\RiderProjects\oop\transport\obj\Debug\net9.0\transport.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\RiderProjects\oop\transport\obj\Debug\net9.0\transport.AssemblyInfoInputs.cache
+C:\Users\admin\RiderProjects\oop\transport\obj\Debug\net9.0\transport.AssemblyInfo.cs
+C:\Users\admin\RiderProjects\oop\transport\obj\Debug\net9.0\transport.csproj.CoreCompileInputs.cache
+C:\Users\admin\RiderProjects\oop\transport\obj\Debug\net9.0\transport.dll
+C:\Users\admin\RiderProjects\oop\transport\obj\Debug\net9.0\refint\transport.dll
+C:\Users\admin\RiderProjects\oop\transport\obj\Debug\net9.0\transport.pdb
+C:\Users\admin\RiderProjects\oop\transport\obj\Debug\net9.0\transport.genruntimeconfig.cache
+C:\Users\admin\RiderProjects\oop\transport\obj\Debug\net9.0\ref\transport.dll
+C:\Users\admin\RiderProjects\OOP\transport\obj\Debug\net9.0\transport.sourcelink.json

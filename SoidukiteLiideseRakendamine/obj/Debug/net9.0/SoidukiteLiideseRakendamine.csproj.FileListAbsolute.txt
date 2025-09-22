@@ -1,0 +1,15 @@
+C:\Users\admin\RiderProjects\OOP\SoidukiteLiideseRakendamine\bin\Debug\net9.0\SoidukiteLiideseRakendamine.exe
+C:\Users\admin\RiderProjects\OOP\SoidukiteLiideseRakendamine\bin\Debug\net9.0\SoidukiteLiideseRakendamine.deps.json
+C:\Users\admin\RiderProjects\OOP\SoidukiteLiideseRakendamine\bin\Debug\net9.0\SoidukiteLiideseRakendamine.runtimeconfig.json
+C:\Users\admin\RiderProjects\OOP\SoidukiteLiideseRakendamine\bin\Debug\net9.0\SoidukiteLiideseRakendamine.dll
+C:\Users\admin\RiderProjects\OOP\SoidukiteLiideseRakendamine\bin\Debug\net9.0\SoidukiteLiideseRakendamine.pdb
+C:\Users\admin\RiderProjects\OOP\SoidukiteLiideseRakendamine\obj\Debug\net9.0\SoidukiteLiideseRakendamine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\RiderProjects\OOP\SoidukiteLiideseRakendamine\obj\Debug\net9.0\SoidukiteLiideseRakendamine.AssemblyInfoInputs.cache
+C:\Users\admin\RiderProjects\OOP\SoidukiteLiideseRakendamine\obj\Debug\net9.0\SoidukiteLiideseRakendamine.AssemblyInfo.cs
+C:\Users\admin\RiderProjects\OOP\SoidukiteLiideseRakendamine\obj\Debug\net9.0\SoidukiteLiideseRakendamine.csproj.CoreCompileInputs.cache
+C:\Users\admin\RiderProjects\OOP\SoidukiteLiideseRakendamine\obj\Debug\net9.0\SoidukiteLiideseRakendamine.sourcelink.json
+C:\Users\admin\RiderProjects\OOP\SoidukiteLiideseRakendamine\obj\Debug\net9.0\SoidukiteLiideseRakendamine.dll
+C:\Users\admin\RiderProjects\OOP\SoidukiteLiideseRakendamine\obj\Debug\net9.0\refint\SoidukiteLiideseRakendamine.dll
+C:\Users\admin\RiderProjects\OOP\SoidukiteLiideseRakendamine\obj\Debug\net9.0\SoidukiteLiideseRakendamine.pdb
+C:\Users\admin\RiderProjects\OOP\SoidukiteLiideseRakendamine\obj\Debug\net9.0\SoidukiteLiideseRakendamine.genruntimeconfig.cache
+C:\Users\admin\RiderProjects\OOP\SoidukiteLiideseRakendamine\obj\Debug\net9.0\ref\SoidukiteLiideseRakendamine.dll

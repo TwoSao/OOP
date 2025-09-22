@@ -1,0 +1,15 @@
+C:\Users\admin\RiderProjects\OOP\SnakeGameUl\bin\Debug\net9.0\SnakeGameUl.exe
+C:\Users\admin\RiderProjects\OOP\SnakeGameUl\bin\Debug\net9.0\SnakeGameUl.deps.json
+C:\Users\admin\RiderProjects\OOP\SnakeGameUl\bin\Debug\net9.0\SnakeGameUl.runtimeconfig.json
+C:\Users\admin\RiderProjects\OOP\SnakeGameUl\bin\Debug\net9.0\SnakeGameUl.dll
+C:\Users\admin\RiderProjects\OOP\SnakeGameUl\bin\Debug\net9.0\SnakeGameUl.pdb
+C:\Users\admin\RiderProjects\OOP\SnakeGameUl\obj\Debug\net9.0\SnakeGameUl.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\RiderProjects\OOP\SnakeGameUl\obj\Debug\net9.0\SnakeGameUl.AssemblyInfoInputs.cache
+C:\Users\admin\RiderProjects\OOP\SnakeGameUl\obj\Debug\net9.0\SnakeGameUl.AssemblyInfo.cs
+C:\Users\admin\RiderProjects\OOP\SnakeGameUl\obj\Debug\net9.0\SnakeGameUl.csproj.CoreCompileInputs.cache
+C:\Users\admin\RiderProjects\OOP\SnakeGameUl\obj\Debug\net9.0\SnakeGameUl.sourcelink.json
+C:\Users\admin\RiderProjects\OOP\SnakeGameUl\obj\Debug\net9.0\SnakeGameUl.dll
+C:\Users\admin\RiderProjects\OOP\SnakeGameUl\obj\Debug\net9.0\refint\SnakeGameUl.dll
+C:\Users\admin\RiderProjects\OOP\SnakeGameUl\obj\Debug\net9.0\SnakeGameUl.pdb
+C:\Users\admin\RiderProjects\OOP\SnakeGameUl\obj\Debug\net9.0\SnakeGameUl.genruntimeconfig.cache
+C:\Users\admin\RiderProjects\OOP\SnakeGameUl\obj\Debug\net9.0\ref\SnakeGameUl.dll
