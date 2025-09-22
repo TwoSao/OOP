@@ -2,7 +2,6 @@
 
 public class autos : transp, ISõiduk
 {
-    public int Uksed;
     public double tarbimist;
     public int kilomeetrit;
     
