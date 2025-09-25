@@ -1,59 +1,75 @@
-﻿namespace SnakeGameUl;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public class Point : Figure
+namespace SnakeGameUl
 {
-    public int x;
-    public int y;
-    public char sym;
+    class Point
+    {
+        public int x;
+        public int y;
+        public char sym;
 
-    public Point()
-    {
-        Console.WriteLine("Lisamine point");
-        
-    }
-    
-    public Point(int _x, int _y, char _sym)
-    {
-        x = _x;
-        y = _y;
-        sym = _sym;
-    }
+        public Point()
+        {
+        }
 
-    public Point(Point p)
-    {
-        x = p.x;
-        y = p.y;
-        sym = p.sym;
-    }
-    
-    public void Move(int offset, Direction direction)
-    {
-        if (direction == Direction.Right)
+        public Point(int x, int y, char sym)
         {
-            x += offset;
+            this.x = x;
+            this.y = y;
+            this.sym = sym;
         }
-        else if (direction == Direction.Left)
+
+        public Point(Point p)
         {
-            x -= offset;
+            x = p.x;
+            y = p.y;
+            sym = p.sym;
         }
-        else if (direction == Direction.Up)
+
+        public void Move(int offset, Direction direction)
         {
-            y -= offset;
+            if(direction == Direction.RIGHT)
+            {
+                x = x + offset;
+            }
+            else if(direction == Direction.LEFT)
+            {
+                x = x - offset;
+            }
+            else if(direction == Direction.UP)
+            {
+                y = y - offset;
+            }
+            else if(direction == Direction.DOWN)
+            {
+                y = y + offset;
+            }
         }
-        else if (direction == Direction.Down)
+
+        public bool IsHit(Point p)
         {
-            y += offset;
+            return p.x == this.x && p.y == this.y;
+        }
+
+        public void Draw()
+        {
+            Console.SetCursorPosition( x, y );
+            Console.Write( sym );			
+        }
+
+        public void Clear()
+        {
+            sym = ' ';
+            Draw();
+        }
+
+        public override string ToString()
+        {
+            return x + ", " + y + ", " + sym;
         }
     }
-    public void Draw()
-    {
-        Console.SetCursorPosition(x, y);
-        Console.Write(sym);
-    }
-    public void Clear()
-    {
-        sym = ' ';
-        Draw();
-    }
-    
 }

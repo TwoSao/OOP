@@ -1,13 +1,16 @@
-﻿namespace SnakeGameUl
-{
-    public enum  Direction
-        {
-            Up,
-            Down,
-            Left,
-            Right
-        }
-        
-}
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-    
+namespace SnakeGameUl
+{
+    enum Direction
+    {
+        LEFT,
+        RIGHT,
+        UP,
+        DOWN
+    }
+}

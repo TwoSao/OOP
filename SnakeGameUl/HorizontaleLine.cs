@@ -1,25 +1,21 @@
-﻿namespace SnakeGameUl;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public class HorizontaleLine : Figure
+namespace SnakeGameUl
 {
-    List<Point> pList;
-    public HorizontaleLine(int xLeft, int xRight, int y, char sym)
+    class HorizontalLine : Figure
     {
-        pList = new List<Point>();
-        for (int x = xLeft; x <= xRight; x++)
+        public HorizontalLine(int xLeft, int xRight, int y, char sym)
         {
-            Point p = new Point(x, y, sym);
-            pList.Add(p);
-            
-        }
-        
-        
-    }
-    public void Draw()
-    {
-        foreach (Point p in pList)
-        {
-            p.Draw();
+            pList = new List<Point>();
+            for(int x = xLeft; x <= xRight; x++)
+            {
+                Point p = new Point( x, y, sym );
+                pList.Add( p );
+            }			
         }
     }
 }
