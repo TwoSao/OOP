@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace SnakeGameUl
 {
+    /// <summary>
+    /// Базовый класс для представления точки на игровом поле
+    /// Содержит координаты (x, y) и символ для отображения
+    /// Используется для создания всех игровых объектов: змейка, еда, стены
+    /// </summary>
     class Point
     {
         public int x;
@@ -57,14 +62,34 @@ namespace SnakeGameUl
 
         public void Draw()
         {
-            Console.SetCursorPosition( x, y );
-            Console.Write( sym );			
+            try
+            {
+                if (x >= 0 && y >= 0 && x < Console.WindowWidth && y < Console.WindowHeight)
+                {
+                    Console.SetCursorPosition( x, y );
+                    Console.Write( sym );
+                }
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                // Игнорируем попытки рисования за границами консоли
+            }
         }
 
         public void Clear()
         {
-            sym = ' ';
-            Draw();
+            try
+            {
+                if (x >= 0 && y >= 0 && x < Console.WindowWidth && y < Console.WindowHeight)
+                {
+                    Console.SetCursorPosition( x, y );
+                    Console.Write( ' ' );
+                }
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                // Игнорируем попытки очистки за границами консоли
+            }
         }
 
         public override string ToString()

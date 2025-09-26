@@ -6,6 +6,14 @@ using System.Threading.Tasks;
 
 namespace SnakeGameUl
 {
+    /// <summary>
+    /// Класс змейки - основной игровой объект
+    /// Наследует от Figure и содержит логику:
+    /// - Движения по игровому полю
+    /// - Обработки нажатий клавиш
+    /// - Поедания еды и роста
+    /// - Проверки столкновений с собой
+    /// </summary>
     class Snake : Figure
     {
         Direction direction;
@@ -54,14 +62,18 @@ namespace SnakeGameUl
 
         public void HandleKey(ConsoleKey key)
         {
-            if ( key == ConsoleKey.LeftArrow )
-                direction = Direction.LEFT;
-            else if ( key == ConsoleKey.RightArrow )
-                direction = Direction.RIGHT;
-            else if ( key == ConsoleKey.DownArrow )
-                direction = Direction.DOWN;
-            else if ( key == ConsoleKey.UpArrow )
-                direction = Direction.UP;
+            Direction newDirection = direction;
+            
+            if ( key == ConsoleKey.LeftArrow && direction != Direction.RIGHT )
+                newDirection = Direction.LEFT;
+            else if ( key == ConsoleKey.RightArrow && direction != Direction.LEFT )
+                newDirection = Direction.RIGHT;
+            else if ( key == ConsoleKey.DownArrow && direction != Direction.UP )
+                newDirection = Direction.DOWN;
+            else if ( key == ConsoleKey.UpArrow && direction != Direction.DOWN )
+                newDirection = Direction.UP;
+                
+            direction = newDirection;
         }
 
         public bool Eat( Point food )
@@ -69,8 +81,8 @@ namespace SnakeGameUl
             Point head = GetNextPoint();
             if ( head.IsHit( food ) )
             {
-                food.sym = head.sym;
-                pList.Add( food );
+                Point newHead = new Point(food.x, food.y, head.sym);
+                pList.Add( newHead );
                 return true;
             }
             else

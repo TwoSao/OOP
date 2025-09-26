@@ -28,3 +28,10 @@ C:\Users\illya\Documents\GitHub\OOP\SnakeGameUl\obj\Debug\net9.0\refint\SnakeGam
 C:\Users\illya\Documents\GitHub\OOP\SnakeGameUl\obj\Debug\net9.0\SnakeGameUl.pdb
 C:\Users\illya\Documents\GitHub\OOP\SnakeGameUl\obj\Debug\net9.0\SnakeGameUl.genruntimeconfig.cache
 C:\Users\illya\Documents\GitHub\OOP\SnakeGameUl\obj\Debug\net9.0\ref\SnakeGameUl.dll
+C:\Users\admin\RiderProjects\OOP\SnakeGameUl\bin\Debug\net9.0\System.Windows.Extensions.dll
+C:\Users\admin\RiderProjects\OOP\SnakeGameUl\bin\Debug\net9.0\runtimes\win\lib\net8.0\System.Windows.Extensions.dll
+C:\Users\admin\RiderProjects\OOP\SnakeGameUl\obj\Debug\net9.0\SnakeGameUl.csproj.AssemblyReference.cache
+C:\Users\admin\RiderProjects\OOP\SnakeGameUl\obj\Debug\net9.0\SnakeGam.4387FBFC.Up2Date
+C:\Users\admin\RiderProjects\OOP\SnakeGameUl\bin\Debug\net9.0\assets\background.wav
+C:\Users\admin\RiderProjects\OOP\SnakeGameUl\bin\Debug\net9.0\assets\death.wav
+C:\Users\admin\RiderProjects\OOP\SnakeGameUl\bin\Debug\net9.0\assets\eat.wav

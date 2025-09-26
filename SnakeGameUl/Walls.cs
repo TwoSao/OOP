@@ -10,15 +10,15 @@ namespace SnakeGameUl
     {
         List<Figure> wallList;
 
-        public Walls( int mapWidth, int mapHeight )
+        public Walls( int mapWidth, int mapHeight, int offsetY = 0 )
         {
             wallList = new List<Figure>();
 
             // Отрисовка рамочки
-            HorizontalLine upLine = new HorizontalLine( 0, mapWidth - 2, 0, '+' );
-            HorizontalLine downLine = new HorizontalLine( 0, mapWidth - 2, mapHeight - 1, '+' );
-            VerticalLine leftLine = new VerticalLine( 0, mapHeight - 1, 0, '+' );
-            VerticalLine rightLine = new VerticalLine( 0, mapHeight - 1, mapWidth - 2, '+' );
+            HorizontalLine upLine = new HorizontalLine( 0, mapWidth - 2, offsetY, '+' );
+            HorizontalLine downLine = new HorizontalLine( 0, mapWidth - 2, mapHeight - 1 + offsetY, '+' );
+            VerticalLine leftLine = new VerticalLine( offsetY, mapHeight - 1 + offsetY, 0, '+' );
+            VerticalLine rightLine = new VerticalLine( offsetY, mapHeight - 1 + offsetY, mapWidth - 2, '+' );
 
             wallList.Add( upLine );
             wallList.Add( downLine );
@@ -44,6 +44,12 @@ namespace SnakeGameUl
             {
                 wall.Draw();
             }
+        }
+
+        public void AddObstacle(int x, int y, int height)
+        {
+            VerticalLine obstacle = new VerticalLine(y, y + height - 1, x, '#');
+            wallList.Add(obstacle);
         }
     }
 }
