@@ -3,14 +3,6 @@ using System.Collections.Generic;
 
 namespace SnakeGameUl
 {
-    /// <summary>
-    /// Класс для управления статистикой игрока
-    /// Отвечает за:
-    /// - Хранение текущих очков, длины змейки, рекорда
-    /// - Сохранение/загрузку данных в файлы
-    /// - Управление таблицей лидеров
-    /// - Отображение статистики на экране
-    /// </summary>
     class Stats
     {
         public string Name { get; set; }
@@ -20,7 +12,6 @@ namespace SnakeGameUl
         public int Level { get; set; }
         public LifeSystem LifeSystem { get; set; }
         
-        // Бонусные эффекты
         public bool HasSpeedBoost { get; private set; }
         public bool HasScoreMultiplier { get; private set; }
         public bool HasSlowDown { get; private set; }
@@ -31,7 +22,7 @@ namespace SnakeGameUl
             Score = 0;
             Length = 4;
             ScoreMultiplier = 1;
-            LifeSystem = new LifeSystem(3); // 3 жизни по умолчанию
+            LifeSystem = new LifeSystem(3);
         }
 
         public void PrintStats()
@@ -39,25 +30,30 @@ namespace SnakeGameUl
             try
             {
                 Console.SetCursorPosition(0, 0);
-                string statsLine = $"Nimi: {Name,-15} Score: {Score,-6} Length: {Length,-4} HighScore: {HighScore,-6} Level: {Level}";
+                string statsLine = $"Nimi: {Name,-15} Skoor: {Score,-6} Pikkus: {Length,-4} Rekord: {HighScore,-6} Tase: {Level}";
                 Console.Write(statsLine.PadRight(Console.WindowWidth - 1));
                 
-                // Отображаем жизни
                 LifeSystem?.DisplayLives();
             }
             catch (ArgumentOutOfRangeException)
             {
-                // Игнорируем ошибки позиционирования курсора
             }
         }
 
         public void UpdateScore(int points = 10)
         {
+            int oldScore = Score;
             Score += points * ScoreMultiplier;
             Length++;
+            
+            if (oldScore / 100 < Score / 100 && LifeSystem != null)
+            {
+                LifeSystem.GainLife();
+                LifeSystem.ShowLifeGainedMessage();
+            }
         }
         
-        // Методы для бонусов
+
         public void ApplySpeedBoost() => HasSpeedBoost = true;
         public void RemoveSpeedBoost() => HasSpeedBoost = false;
         
@@ -82,18 +78,14 @@ namespace SnakeGameUl
         
         public int GetSpeedModifier()
         {
-            if (HasSpeedBoost) return -30; // Ускорение
-            if (HasSlowDown) return 50;    // Замедление
+            if (HasSpeedBoost) return -30;
+            if (HasSlowDown) return 50;
             return 0;
         }
         
-        /// <summary>
-        /// Сбрасывает статистику после потери жизни
-        /// </summary>
         public void ResetAfterDeath()
         {
             Length = 4;
-            // Очки не сбрасываются, чтобы сохранить прогресс
         }
         
         public void UpdateLevel()
@@ -147,7 +139,6 @@ namespace SnakeGameUl
             }
             catch
             {
-                // Игнорируем ошибки сохранения
             }
         }
 
@@ -162,7 +153,6 @@ namespace SnakeGameUl
             }
             catch
             {
-                // Игнорируем ошибки сохранения
             }
         }
 

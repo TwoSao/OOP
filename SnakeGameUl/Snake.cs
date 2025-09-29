@@ -6,14 +6,6 @@ using System.Threading.Tasks;
 
 namespace SnakeGameUl
 {
-    /// <summary>
-    /// Класс змейки - основной игровой объект
-    /// Наследует от Figure и содержит логику:
-    /// - Движения по игровому полю
-    /// - Обработки нажатий клавиш
-    /// - Поедания еды и роста
-    /// - Проверки столкновений с собой
-    /// </summary>
     class Snake : Figure
     {
         Direction direction;

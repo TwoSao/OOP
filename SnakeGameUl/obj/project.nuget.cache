@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "cpBauSMUpLg=",
+  "dgSpecHash": "/XTzOrc00Lw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\admin\\RiderProjects\\OOP\\SnakeGameUl\\SnakeGameUl.csproj",
+  "projectFilePath": "C:\\Users\\illya\\Documents\\GitHub\\OOP\\SnakeGameUl\\SnakeGameUl.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\admin\\.nuget\\packages\\system.windows.extensions\\8.0.0\\system.windows.extensions.8.0.0.nupkg.sha512"
+    "C:\\Users\\illya\\.nuget\\packages\\system.windows.extensions\\8.0.0\\system.windows.extensions.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }
