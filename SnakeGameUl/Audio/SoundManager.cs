@@ -55,7 +55,7 @@ namespace SnakeGameUl.Audio
             {
                 if (backgroundMusic != null)
                 {
-                    backgroundMusic.Volume = 0.5f;
+                    backgroundMusic.Volume = 0.2f;
                     backgroundPlayer?.Play();
                 }
             }

@@ -89,7 +89,7 @@ namespace SnakeGameUl
                             player.Stats.ResetAfterDeath();
                             
                             Point newStartPoint = new Point(4, 5 + gameOffsetY, '*');
-                            player.Snake = new Snake(newStartPoint, 4, Direction.RIGHT);
+                            player.Snake.Reset(newStartPoint, 4, Direction.RIGHT);
                             
                             Console.Clear();
                             player.Stats.PrintStats();

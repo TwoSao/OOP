@@ -4,7 +4,7 @@ namespace SnakeGameUl.UI
 {
     public static class GameDisplay
     {
-        // Показывает меню начала игры
+        // Näitab mängu alguse menüüd
         public static void ShowWelcome()
         {
             Console.Clear();
@@ -15,7 +15,7 @@ namespace SnakeGameUl.UI
             Console.ResetColor();
         }
 
-        // Показывает сообщение об окончании игры
+        // Näitab mängu lõpu sõnumit
         public static void ShowGameOver()
         {
             Console.Clear();
@@ -26,7 +26,7 @@ namespace SnakeGameUl.UI
             Console.ResetColor();
         }
 
-        // Показывает меню выбора сложности
+        // Näitab raskusastme valiku menüüd
         public static void ShowDifficultyMenu()
         {
             Console.WriteLine("╔══════════════════════════════════════╗");
@@ -38,7 +38,7 @@ namespace SnakeGameUl.UI
             Console.WriteLine("╚══════════════════════════════════════╝");
         }
 
-        // Показывает запрос имени игрока
+        // Näitab mängija nime küsimust
         public static void ShowNamePrompt()
         {
             Console.WriteLine("╔══════════════════════════════════════╗");
@@ -46,7 +46,7 @@ namespace SnakeGameUl.UI
             Console.WriteLine("╚══════════════════════════════════════╝");
         }
 
-        // Отображает текст в указанных координатах
+        // Kuvab teksti määratud koordinaatides
         public static void WriteText(string text, int xOffset, int yOffset)
         {
             try
@@ -56,7 +56,7 @@ namespace SnakeGameUl.UI
             }
             catch (ArgumentOutOfRangeException)
             {
-                // Игнорируем выход за границы консоли
+                // Ignoreerime konsooli piiride ületamist
             }
         }
     }

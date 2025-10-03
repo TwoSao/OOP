@@ -92,5 +92,20 @@ namespace SnakeGameUl.Game
             else
                 return false;
         }
+
+        // Lähtestab mao algse positsiooni ja pikkuse
+        public void Reset(Point startPoint, int length, Direction startDirection)
+        {
+            Console.Clear();
+            direction = startDirection;
+            pList.Clear();
+            
+            for (int i = 0; i < length; i++)
+            {
+                Point p = new Point(startPoint);
+                p.Move(i, direction);
+                pList.Add(p);
+            }
+        }
     }
 }
