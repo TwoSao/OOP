@@ -3,32 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using SnakeGameUl.Core;
+using SnakeGameUl.Game;
+using SnakeGameUl.Audio;
+using SnakeGameUl.UI;
 
 namespace SnakeGameUl
 {
     class Program
     {
+        // Peamine funktsioon - käivitab mängu ja haldab mängutsüklit
         static void Main(string[] args)
         {
             string basePath = AppDomain.CurrentDomain.BaseDirectory;
             MusicManager.Initialize(basePath);
-            MusicManager.PlayMenuMusic();
+            MusicManager.StartBackgroundMusic();
 
             while (true)
             {
-                Console.Clear();
+                GameDisplay.ShowWelcome();
+                Thread.Sleep(2000);
 
                 int gameOffsetY = 5;
 
-                Console.WriteLine("Sisesta oma nimi: ");
+                Console.Clear();
+                GameDisplay.ShowNamePrompt();
                 string playerName = Console.ReadLine();
+                if (string.IsNullOrWhiteSpace(playerName))
+                    playerName = "Mängija";
 
                 Console.Clear();
-
-                Console.WriteLine("Vali raskusaste:");
-                Console.WriteLine("1 - Lihtne (aeglane kiirus)");
-                Console.WriteLine("2 - Keskmine (keskmine kiirus)");
-                Console.WriteLine("3 - Raske (kiire kiirus + rohkem takistusi)");
+                GameDisplay.ShowDifficultyMenu();
 
                 int difficulty = 1;
                 while (true)
@@ -41,8 +46,7 @@ namespace SnakeGameUl
                     }
                 }
 
-                // Остановка меню музыки при старте игры
-                MusicManager.StopMenuMusic();
+
 
                 Console.Clear();
 
@@ -71,20 +75,21 @@ namespace SnakeGameUl
                 FoodCreator foodCreator = new FoodCreator(80, 25, '$', gameOffsetY);
                 Point food = foodCreator.CreateFood();
                 food.Draw();
+                
 
                 while (true)
                 {
                     if (walls.IsHit(player.Snake) || player.Snake.IsHitTail())
                     {
-                        MusicManager.PlayLoseSound();
                         
                         if (player.Stats.LifeSystem.LoseLife())
                         {
+                            MusicManager.PlayLifeSound();
                             player.Stats.LifeSystem.ShowLifeLostMessage();
                             player.Stats.ResetAfterDeath();
                             
-                            startPoint = new Point(4, 5 + gameOffsetY, '*');
-                            player.Snake = new Snake(startPoint, 4, Direction.RIGHT);
+                            Point newStartPoint = new Point(4, 5 + gameOffsetY, '*');
+                            player.Snake = new Snake(newStartPoint, 4, Direction.RIGHT);
                             
                             Console.Clear();
                             player.Stats.PrintStats();
@@ -97,6 +102,7 @@ namespace SnakeGameUl
                         }
                         else
                         {
+                            MusicManager.PlayEndSound();
                             player.Stats.SaveStats();
                             player.Stats.SaveToLeaderboard();
                             break;
@@ -126,39 +132,23 @@ namespace SnakeGameUl
                     }
                 }
 
-                WriteGameOver();
+                GameDisplay.ShowGameOver();
                 Stats.ShowLeaderboard();
 
                 Console.WriteLine("\nKas soovid uuesti mängida? (j/e)");
                 var answer = Console.ReadKey().KeyChar;
                 if (answer == 'j' || answer == 'J')
                 {
-                    MusicManager.PlayMenuMusic();
+                    MusicManager.StartBackgroundMusic();
                 }
                 else
                 {
-                    MusicManager.StopMenuMusic();
+                    MusicManager.Dispose();
                     break;
                 }
             }
         }
 
-        static void WriteGameOver()
-        {
-            int xOffset = 25;
-            int yOffset = 11;
-            Console.Clear();
-            Console.SetCursorPosition(xOffset, yOffset++);
-            WriteText("!-----------------!", xOffset, yOffset++);
-            WriteText("MÄNG LÕPPENUD", xOffset + 1, yOffset++);
-            yOffset++;
-            WriteText("!-----------------!", xOffset, yOffset++);
-        }
 
-        static void WriteText(String text, int xOffset, int yOffset)
-        {
-            Console.SetCursorPosition(xOffset, yOffset);
-            Console.WriteLine(text);
-        }
     }
 }

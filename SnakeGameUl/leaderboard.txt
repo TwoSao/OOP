@@ -54,3 +54,13 @@ Il,270
 OJ buda,220
 Lol,30
 ol,30
+il,130
+illia,60
+1,0
+Illia,50
+Illia,270
+Illia,40
++,0
+0',100
+eee,30
+Illia,180
