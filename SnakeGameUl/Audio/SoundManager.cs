@@ -19,22 +19,30 @@ namespace SnakeGameUl.Audio
         // Initsialiseerib kõik helimängijad ja laadib helifailid
         public static void Initialize(string basePath)
         {
-            string backgroundSound = Path.Combine(basePath, "assets", "background.wav");
-            eatSoundPath = Path.Combine(basePath, "assets", "eat.wav");
-            endSoundPath = Path.Combine(basePath, "assets", "end.wav");
-            lifeSoundPath = Path.Combine(basePath, "assets", "life.wav");
-
-            backgroundPlayer = new WaveOutEvent();
-            effectPlayer = new WaveOutEvent();
-            endPlayer = new WaveOutEvent();
-            lifePlayer = new WaveOutEvent();
-
-            if (File.Exists(backgroundSound))
+            try
             {
-                backgroundMusic = new AudioFileReader(backgroundSound);
-                backgroundMusic.Volume = 0.5f;
-                backgroundPlayer.Init(backgroundMusic);
-                backgroundPlayer.PlaybackStopped += (s, e) => RestartBackgroundMusic();
+                string backgroundSound = Path.Combine(basePath, "assets", "background.wav");
+                eatSoundPath = Path.Combine(basePath, "assets", "eat.wav");
+                endSoundPath = Path.Combine(basePath, "assets", "end.wav");
+                lifeSoundPath = Path.Combine(basePath, "assets", "life.wav");
+
+                backgroundPlayer = new WaveOutEvent();
+                effectPlayer = new WaveOutEvent();
+                endPlayer = new WaveOutEvent();
+                lifePlayer = new WaveOutEvent();
+
+                if (File.Exists(backgroundSound))
+                {
+                    backgroundMusic = new AudioFileReader(backgroundSound);
+                    backgroundMusic.Volume = 0.5f;
+                    backgroundPlayer.Init(backgroundMusic);
+                    backgroundPlayer.PlaybackStopped += (s, e) => RestartBackgroundMusic();
+                }
+            }
+            catch (NAudio.MmException ex)
+            {
+                Console.WriteLine("Audio device not available: " + ex.Message);
+                // Continue without audio
             }
         }
 
